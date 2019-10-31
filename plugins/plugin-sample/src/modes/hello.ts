@@ -14,15 +14,12 @@
  * limitations under the License.
  */
 
-import { isHeadless } from '@kui-shell/core/api/capabilities'
+import { isKubeResource } from '@kui-shell/plugin-kubeui'
 
-import hello from './modes/hello'
-import lastApplied from './modes/last-applied'
-
-export default async () => {
-  if (!isHeadless()) {
-    const { registerMode } = await import('@kui-shell/core/api/registrars')
-    registerMode(hello)
-    registerMode(lastApplied)
+export default {
+  when: isKubeResource,
+  mode: {
+    mode: 'demo1',
+    content: 'some string content'
   }
 }
