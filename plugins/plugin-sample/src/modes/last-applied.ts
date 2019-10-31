@@ -51,8 +51,7 @@ const renderLastApplied = async (tab: Tab, resource: KubeResource) => {
 }
 
 /**
- * Add a Pods mode button to the given modes model, if called for by
- * the given resource.
+ * This is our mode model for the Last Applied tab.
  *
  */
 export default {
