@@ -45,7 +45,7 @@
     "@kui-shell/plugin-bash-like": "5.2.24",
     "@kui-shell/plugin-core-support": "5.2.24",
     "@kui-shell/plugin-editor": "5.2.24",
-    "@kui-shell/plugin-kubeui": "0.0.1",
+    "@kui-shell/plugin-kubeui": "0.0.4",
     "@kui-shell/plugin-proxy-support": "5.2.24",
     "@kui-shell/proxy": "5.2.24",
     "@kui-shell/test": "5.2.24",
