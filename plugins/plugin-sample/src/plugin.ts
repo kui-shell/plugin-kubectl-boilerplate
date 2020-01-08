@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-import Commands from '@kui-shell/core/api/commands'
+import { Registrar } from '@kui-shell/core'
 
-export default async (commandTree: Commands.Registrar) => {
-  commandTree.listen('/hello', () => 'hi')
+export default async (registrar: Registrar) => {
+  registrar.listen('/hello', () => 'hi')
 }
