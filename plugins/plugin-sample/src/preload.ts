@@ -14,15 +14,13 @@
  * limitations under the License.
  */
 
-import { isHeadless } from '@kui-shell/core/api/capabilities'
+import { isHeadless, PreloadRegistrar } from '@kui-shell/core'
 
 import hello from './modes/hello'
 import lastApplied from './modes/last-applied'
 
-export default async () => {
+export default async (registrar: PreloadRegistrar) => {
   if (!isHeadless()) {
-    const { registerMode } = await import('@kui-shell/core/api/registrars')
-    registerMode(hello)
-    registerMode(lastApplied)
+    registrar.registerModes(hello, lastApplied)
   }
 }
