@@ -14,5 +14,18 @@
  * limitations under the License.
  */
 
-import './web/css/static/colors.css'
-require('@kui-shell/plugin-client-default')
+import '../web/css/static/colors.css'
+
+import { render as ReactDomRender } from 'react-dom'
+import Client from './Client'
+
+/**
+ * Use react-dom to render the client into the given container
+ *
+ */
+function renderMain(container: Element) {
+  ReactDomRender(Client(), container)
+}
+
+/** boot Kui! */
+import('@kui-shell/core').then(_ => _.boot(renderMain))
