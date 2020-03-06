@@ -9,8 +9,10 @@
   "dependencies": {
     "@kui-shell/plugin-client-common": "^7.0.15",
     "@kui-shell/plugin-client-default": "^7.0.15",
+    "@kui-shell/plugin-kubeui": "*",
     "@kui-shell/plugin-view-utilization": "*",
-    "@kui-shell/plugin-kubeui": "*"
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   },
   "homepage": "https://github.com/IBM/kui#readme",
   "private": true,
