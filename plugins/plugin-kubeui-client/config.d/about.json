@@ -1,14 +1,20 @@
 {
-  "nav": {
-    "Kui": {
-      "modes": [
-        {
-          "mode": "about",
-          "content": "about:content",
-          "contentType": "text/markdown"
-        },
-        { "mode": "version", "contentFrom": "version --full" }
-      ]
+  "menus": [
+    {
+      "Kui": {
+        "modes": [
+          {
+            "mode": "about",
+            "content": "about:content",
+            "contentType": "text/markdown"
+          },
+          { "mode": "version", "contentFrom": "version --full" }
+        ]
+      }
     }
-  }
+  ],
+  "links": [
+    { "label": "Kubectl Help", "command": "kubectl help" },
+    { "label": "Github", "href": "https://github.com/IBM/kui" }
+  ]
 }

@@ -15,7 +15,7 @@
  */
 
 import { Tab } from '@kui-shell/core'
-import { KubeResource } from '@kui-shell/plugin-kubeui'
+import { isKubeResource, KubeResource } from '@kui-shell/plugin-kubeui'
 
 /**
  * @return The last-applied-configuration annotation, as a raw string
@@ -31,7 +31,7 @@ function getLastAppliedRaw(resource: KubeResource): string {
  *
  */
 function hasLastApplied(resource: KubeResource): boolean {
-  return getLastAppliedRaw(resource) !== undefined
+  return isKubeResource(resource) && getLastAppliedRaw(resource) !== undefined
 }
 
 /**
